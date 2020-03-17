@@ -95,7 +95,7 @@ class FBoard:
     def move_x(self, row_x, column_x):
         """Moves the X Piece"""
 
-        current_x_pos = [0,0]
+        current_x_pos = self._x_location
         desired_move = [row_x, column_x]
         allowed_moves = []
 
