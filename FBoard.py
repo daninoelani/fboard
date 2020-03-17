@@ -105,7 +105,7 @@ class FBoard:
             return False
 
         # Check if O is Occupying Space
-        elif self._game_board[row_x][column_x] == "o":
+        if self._game_board[row_x][column_x] == "o":
             #print("Space is occupied by O")
             return False
 
@@ -175,12 +175,12 @@ class FBoard:
             return False
 
         # Check to make sure there's an O to move
-        elif self._game_board[row1_o][column1_o] != "o":
+        if self._game_board[row1_o][column1_o] != "o":
             #print("Test: Not an O there to move")
             return False
 
         # Check if Desired Space to Move is Occupied
-        elif self._game_board[row2_o][column2_o] == "o" or self._game_board[row2_o][column2_o] == "x":
+        if self._game_board[row2_o][column2_o] == "o" or self._game_board[row2_o][column2_o] == "x":
             #print("Space is occupied already by an X or O")
             return False
 
