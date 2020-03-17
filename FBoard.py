@@ -109,6 +109,9 @@ class FBoard:
             #print("Space is occupied by O")
             return False
 
+        if row_x < 0 or row_x > 7 or column_x < 0 or column_x > 7:
+            return False
+
         # Check If Move Is Allowed and Make Move If It Is
         else:
              #Generate Allowed Moves
@@ -172,6 +175,9 @@ class FBoard:
         # Check if Game Already Won
         if self._game_state == "X_WON" or self._game_state == "O_WON":
             #print("Test: Quitting Now - Game Over")
+            return False
+
+        if row2_o < 0 or row2_o > 7 or column2_o < 0 or column2_o > 7:
             return False
 
         # Check to make sure there's an O to move
