@@ -64,11 +64,11 @@ class FBoard:
                 if y_coord >= 0 and y_coord <= 7:
                     o_checks.append([x_coord, y_coord])
                     #print(o_checks)
-                elif y_coord <= -1 or y_coord >= 8:
+                elif y_coord <= 0 or y_coord >= 7:
                     x_is_done += 1
 
-            elif x_coord <= -1 or x_coord >= 8:
-                if y_coord <= -1 or y_coord >= 8:
+            elif x_coord <= 0 or x_coord >= 7:
+                if y_coord <= 0 or y_coord >= 7:
                     x_is_done += 1
                     #print("Out of Bounds:", x_is_done)
 
